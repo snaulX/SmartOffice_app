@@ -9,10 +9,12 @@
 
   <ItemGroup>
     <None Remove="Office.png" />
+    <None Remove="UPDATE.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Office.png" />
+    <Resource Include="UPDATE.png" />
   </ItemGroup>
 
   <ItemGroup>

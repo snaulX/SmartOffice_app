@@ -19,7 +19,12 @@ namespace SmartOfficeApp
             Console.WriteLine(client.BaseAddress.ToString());
         }
 
-        public static async Task<string> Request(string address)
+        public static async Task Post(string address, string content)
+        {
+            await client.PostAsync(address, new StringContent(content));
+        }
+
+        public static async Task<string> Get(string address)
         {
             return await client.GetStringAsync(address);
         }

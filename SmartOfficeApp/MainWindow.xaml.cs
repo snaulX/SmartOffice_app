@@ -20,11 +20,31 @@ namespace SmartOfficeApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static IDevice Current { get; set; }
+        private static MainWindow instance;
+        private static IDevice current;
+
+        private static void UpdateCurrentDevice()
+        {
+            instance.DeviceName.Text = current.Name;
+            instance.DeviceMenu = current.Menu;
+            instance.DeviceStatus.Text = current.Status;
+            instance.DeviceStatusIcon.Source = new ImageSourceConverter().ConvertFromString(current.ImageStatus) as ImageSource;
+        }
+
+        public static IDevice Current 
+        { 
+            get => current; 
+            set
+            {
+                current = value;
+                UpdateCurrentDevice();
+            }
+        }
 
         public MainWindow()
         {
             InitializeComponent();
+            instance = this;
         }
     }
 }

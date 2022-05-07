@@ -25,7 +25,7 @@ namespace SmartOfficeApp
 
         private int _index;
 
-        private async void CreateCoffee() => await Client.Request("/coffee/create");
+        private async void CreateCoffee() => await Client.Get("/coffee/create");
 
         public CoffeeMachine()
         {
@@ -35,20 +35,20 @@ namespace SmartOfficeApp
             _index = lastIndex++;
         }
 
-        public string Status => Client.Request($"coffee/{_index}/status").Result;
+        public string Status => Client.Get($"coffee/{_index}/status").Result;
 
-        public string ImageStatus => "Gut.png";
+        public string ImageStatus => "Image/Gut.png";
 
         public UserControl Menu => new CoffeeMachineMenu(this);
 
         public async void Update()
         {
-            await Client.Request($"coffee/{_index}/update");
+            await Client.Get($"coffee/{_index}/update");
         }
 
         public async void MakeCoffee()
         {
-            await Client.Request($"coffee/{_index}/make");
+            await Client.Post($"coffee/{_index}/make", "latte");
         }
     }
 }

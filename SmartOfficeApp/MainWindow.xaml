@@ -8,6 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Orientation="Horizontal">
         <StackPanel Orientation="Vertical">
+            <Button>
+                <Image Source="/UPDATE.png" />
+            </Button>
             <TextBlock>Name:</TextBlock>
             <TextBlock x:Name="DeviceName" />
             <UserControl x:Name="DeviceMenu" />
@@ -16,7 +19,7 @@
         </StackPanel>
         <Canvas>
             <Canvas.Background>
-                <ImageBrush ImageSource="Office.png" />
+                <ImageBrush ImageSource="/Office.png" />
             </Canvas.Background>
             <local:CoffeeMachine></local:CoffeeMachine>
         </Canvas>
