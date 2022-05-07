@@ -20,13 +20,13 @@ namespace SmartOfficeApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static MainWindow instance;
+        public static MainWindow Instance;
         private static IDevice current;
 
-        private async void UpdateCurrentDevice()
+        public async void UpdateCurrentDevice()
         {
             DeviceName.Text = await current.Name;
-            DeviceMenu = current.Menu;
+            DeviceMenu.Content = current.Menu;
             DeviceStatus.Text = await current.Status;
             DeviceStatusIcon.Source = new ImageSourceConverter().ConvertFromString(current.ImageStatus) as ImageSource;
         }
@@ -37,14 +37,14 @@ namespace SmartOfficeApp
             set
             {
                 current = value;
-                instance.UpdateCurrentDevice();
+                Instance.UpdateCurrentDevice();
             }
         }
 
         public MainWindow()
         {
             InitializeComponent();
-            instance = this;
+            Instance = this;
         }
 
         private void Button_UpdateCurrentDevice(object sender, RoutedEventArgs e)

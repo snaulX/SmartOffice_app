@@ -13,13 +13,13 @@
             </Button>
             <TextBlock>Name:</TextBlock>
             <TextBlock x:Name="DeviceName" />
-            <UserControl x:Name="DeviceMenu" />
+            <ContentControl x:Name="DeviceMenu" />
             <Image x:Name="DeviceStatusIcon" />
             <TextBlock x:Name="DeviceStatus" />
         </StackPanel>
         <Canvas>
             <Canvas.Background>
-                <ImageBrush ImageSource="/Image/Office.png" />
+                <ImageBrush ImageSource="Image/Office.png" />
             </Canvas.Background>
             <local:CoffeeMachine></local:CoffeeMachine>
         </Canvas>
