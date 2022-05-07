@@ -23,6 +23,11 @@ namespace SmartOfficeApp
         public static MainWindow Instance;
         private static IDevice current;
 
+        public async void UpdateStatus()
+        {
+            DeviceStatus.Text = await current.Status;
+            DeviceStatusIcon.Source = new ImageSourceConverter().ConvertFromString(current.ImageStatus) as ImageSource;
+        }
         public async void UpdateCurrentDevice()
         {
             DeviceName.Text = await current.Name;

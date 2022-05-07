@@ -46,12 +46,12 @@ namespace SmartOfficeApp
         public async void MakeLatte()
         {
             await Client.Post($"coffee/{_index}/make", "latte");
-            MainWindow.Instance.UpdateCurrentDevice();
+            MainWindow.Instance.UpdateStatus();
         }
         public async void MakeCappucino()
         {
             await Client.Post($"coffee/{_index}/make", "cappucino");
-            MainWindow.Instance.UpdateCurrentDevice();
+            MainWindow.Instance.UpdateStatus();
         }
     }
 }
