@@ -9,7 +9,7 @@
     <StackPanel Orientation="Horizontal">
         <StackPanel Orientation="Vertical">
             <Button>
-                <Image Source="/UPDATE.png" />
+                <Image Source="/Image/UPDATE.png" />
             </Button>
             <TextBlock>Name:</TextBlock>
             <TextBlock x:Name="DeviceName" />
@@ -19,7 +19,7 @@
         </StackPanel>
         <Canvas>
             <Canvas.Background>
-                <ImageBrush ImageSource="/Office.png" />
+                <ImageBrush ImageSource="/Image/Office.png" />
             </Canvas.Background>
             <local:CoffeeMachine></local:CoffeeMachine>
         </Canvas>

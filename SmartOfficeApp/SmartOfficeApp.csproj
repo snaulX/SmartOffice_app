@@ -8,19 +8,61 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\coffee.png" />
+    <None Remove="Image\computer.png" />
+    <None Remove="Image\Gut.png" />
+    <None Remove="Image\make_coffee.png" />
+    <None Remove="Image\Nicht_Gut.png" />
+    <None Remove="Image\no_coffee.png" />
+    <None Remove="Image\no_milk.png" />
+    <None Remove="Image\no_water.png" />
+    <None Remove="Image\off.png" />
+    <None Remove="Image\Office.png" />
+    <None Remove="Image\on.png" />
+    <None Remove="Image\UPDATE.png" />
     <None Remove="Office.png" />
     <None Remove="UPDATE.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Image\coffee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\computer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\Gut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\make_coffee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\Nicht_Gut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\no_coffee.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\no_milk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\no_water.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\off.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\Office.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\on.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\UPDATE.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Office.png" />
     <Resource Include="UPDATE.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Image\Office.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

@@ -37,7 +37,7 @@ namespace SmartOfficeApp
 
         public string Status => Client.Get($"coffee/{_index}/status").Result;
 
-        public string ImageStatus => "Image/Gut.png";
+        public string ImageStatus => "/Image/Gut.png";
 
         public UserControl Menu => new CoffeeMachineMenu(this);
 
