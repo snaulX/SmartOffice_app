@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SmartOfficeApp"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Button x:Name="IconButton">
-        <Image Source="/Office.png" />
+             d:DesignHeight="512" d:DesignWidth="512">
+    <Button x:Name="IconButton" Background="{x:Null}">
+        <Image Source="/Image/coffee.png" Stretch="Fill" />
     </Button>
 </UserControl>

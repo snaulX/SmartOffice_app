@@ -39,11 +39,16 @@ namespace SmartOfficeApp
 
         public string ImageStatus => "Gut.png";
 
-        public UserControl Menu => new CoffeeMachineMenu();
+        public UserControl Menu => new CoffeeMachineMenu(this);
 
-        public void Update()
+        public async void Update()
         {
-            Client.Request($"coffee/{_index}/update");
+            await Client.Request($"coffee/{_index}/update");
+        }
+
+        public async void MakeCoffee()
+        {
+            await Client.Request($"coffee/{_index}/make");
         }
     }
 }

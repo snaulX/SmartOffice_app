@@ -20,9 +20,17 @@ namespace SmartOfficeApp
     /// </summary>
     public partial class CoffeeMachineMenu : UserControl
     {
+        private readonly CoffeeMachine machine;
+
         public CoffeeMachineMenu()
         {
             InitializeComponent();
+        }
+
+        public CoffeeMachineMenu(CoffeeMachine machine) : this()
+        {
+            this.machine = machine;
+            MakeCoffee.Click += (s, e) => machine.MakeCoffee();
         }
     }
 }
