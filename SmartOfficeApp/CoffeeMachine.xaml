@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SmartOfficeApp"
              mc:Ignorable="d" 
-             d:DesignHeight="512" d:DesignWidth="512">
+             d:DesignHeight="128" d:DesignWidth="128">
     <Button x:Name="IconButton" Background="{x:Null}">
         <Image Source="/Image/coffee.png" Stretch="Fill" />
     </Button>

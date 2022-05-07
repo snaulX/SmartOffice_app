@@ -35,20 +35,21 @@ namespace SmartOfficeApp
             _index = lastIndex++;
         }
 
-        public string Status => Client.Get($"coffee/{_index}/status").Result;
+        public new Task<string> Name => Client.Get($"coffee/{_index}/name");
 
-        public string ImageStatus => "/Image/Gut.png";
+        public Task<string> Status => Client.Get($"coffee/{_index}/status");
+
+        public string ImageStatus => "Image/Gut.png";
 
         public UserControl Menu => new CoffeeMachineMenu(this);
 
-        public async void Update()
-        {
-            await Client.Get($"coffee/{_index}/update");
-        }
-
-        public async void MakeCoffee()
+        public async void MakeLatte()
         {
             await Client.Post($"coffee/{_index}/make", "latte");
+        }
+        public async void MakeCappucino()
+        {
+            await Client.Post($"coffee/{_index}/make", "cappucino");
         }
     }
 }

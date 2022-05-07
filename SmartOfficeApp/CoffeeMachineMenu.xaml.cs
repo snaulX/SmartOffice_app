@@ -30,7 +30,8 @@ namespace SmartOfficeApp
         public CoffeeMachineMenu(CoffeeMachine machine) : this()
         {
             this.machine = machine;
-            MakeCoffee.Click += (s, e) => machine.MakeCoffee();
+            MakeLatte.Click += (s, e) => machine.MakeLatte();
+            MakeCappucino.Click += (s, e) => machine.MakeCappucino();
         }
     }
 }

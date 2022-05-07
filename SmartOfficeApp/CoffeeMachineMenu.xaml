@@ -7,6 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="400">
     <StackPanel Orientation="Vertical">
-        <Button x:Name="MakeCoffee">Make Coffee</Button>
+        <Button x:Name="MakeLatte">Make Latte</Button>
+        <Button x:Name="MakeCappucino">Make Cappucino</Button>
     </StackPanel>
 </UserControl>
